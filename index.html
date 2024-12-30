@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar start here -->
+    <nav class="navbar">
+        <div class="navbar__logo">Portfolio</div>
+        <ul class="navbar__menu" id="navbar-menu">
+            <li class="navbar__menu__item"><a href="#hero">Home</a></li>
+            <li class="navbar__menu__item"><a href="#about">About</a></li>
+            <li class="navbar__menu__item"><a href="#service">Services</a></li>
+            <li class="navbar__menu__item"><a href="#projects">Projects</a></li>
+        </ul>
+        <img src="images/menu.png" id="toggle-btn" width="40px">
+    </nav>
+    
+<!-- Navbar End here -->
+
+
+<!-- Main start here -->
+<div class="main container" id="hero">
+
+    <!-- Hero section strat here -->
+    <div class="main_left">
+        <div class="main_left_content">
+            <h1 class="main_left_content_title">Hello, I'm <span>John Doe</span></h1>
+            <p class="main_left_content_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button class="main_left_content_button">Download CV</button>
+        </div>
+    </div>
+    <div class="main_right">
+        <img src="images/jack.png" alt="hero" style="width: 100%;">
+    </div>
+    <!-- Hero section End here -->
+</div>
+<div class="container my-4" id="service">
+    <h2 class="text-center fs-2">OUR SERVICES</h2>
+    <div class="my-2 cards">
+        <div class="card">
+            <h2 class="fs-2">Web Development</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsum sit, hic iure nulla aut doloribus magni corrupti perspiciatis nostrum vero distinctio ipsa.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="fs-2">Web Development</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsum sit, hic iure nulla aut doloribus magni corrupti perspiciatis nostrum vero distinctio ipsa.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="fs-2">Web Development</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsum sit, hic iure nulla aut doloribus magni corrupti perspiciatis nostrum vero distinctio ipsa.</p>
+        </div>
+    </div>
+</div>
+
+<!-- project section start here -->
+ <div class="container my-4" id="projects">
+    <h3 class="fs-2 text-center">OUR PROJECTS</h3>
+    <div class="cards">
+        <div class="card my-2">
+            <img src="images/project_1.jpg" style="width: 100%; height: 200px;cursor: pointer;">
+        </div>
+        <div class="card">
+            <img src="images/project_2.jpg" style="width: 100%; height: 200px;cursor: pointer;">
+        </div>
+        <div class="card">
+            <img src="images/project_3.jpg" style="width: 100%; height: 200px;cursor: pointer;">
+        </div>
+    </div>
+ </div>
+<!-- project section end here -->
+
+
+<!-- Contect us strat -->
+<div class="container my-4" id="contact">
+    <h3 class="fs-2 text-center my-4">Contect Us</h3>
+    <div class="row">
+        <div class="col-6 img">
+           <img src="images/map.avif" style="width: 100%; border-radius: 10px;">
+        </div>
+        <div class="col-6">
+            <form>
+                <label>Your Name</label>
+                <input type="text" placeholder="Your Name ">
+
+                <label>Phone</label>
+                <input type="tel" placeholder="Your Phone ">
+
+                <label>Message</label><br>
+                <textarea name="" id="" rows="3"></textarea>
+                <button class="send-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Contect us end -->
+
+<!-- usefull Links -->
+ <div class="social-links">
+    <div class="container">
+    <div class="row">
+     <div class="col-4">
+        <h3 class="fs-2">Quick Links</h3>
+        <p>Home</p>
+        <p>About</p>
+        <p>Projects</p>
+        <p>Contact</p>
+     </div>
+     <div class="col-4">
+        <h3 class="fs-2">Social Links</h3>
+        <p>FaceBook</p>
+        <p>Instagram</p>
+        <p>Twitter</p>
+        <p>Linked In</p>
+     </div>
+     <div class="col-4">
+        <h3 class="fs-2">Projects Links</h3>
+        <p>Project 1</p>
+        <p>Project 2</p>
+        <p>Project 3</p>
+        <p>Project 4</p>
+     </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container text-center">
+        <p>Portfolio 2025 &copy; All rights reserved</p>
+    </div>
+</div>
+ </div>
+
+
+
+
+
+<!-- Main End here -->
+
+<script>
+    let nav = document.getElementById('navbar-menu'); // This targets the navbar menu
+    let toggleBtn = document.getElementById('toggle-btn'); // This targets the toggle button
+
+    let openMenu = false;
+    nav.style.right = "-200px";
+    function toggleMenu() {
+        openMenu = !openMenu; // Toggle the open/close state of the menu
+
+        if (openMenu) {
+            nav.style.right = "0";
+            toggleBtn.style.color="white" // Slide in the menu (right side of the screen)
+        } else {
+            nav.style.right = "-200px";
+            toggleBtn.style.color = "black" // Slide out the menu (hide it off-screen)
+        }
+    }
+
+    // Add event listener to toggle button
+    toggleBtn.addEventListener('click', toggleMenu);
+</script>
+
+</body>
+</html>
